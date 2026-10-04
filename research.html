@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research &middot; Seongje Hong</title>
+  <meta name="description" content="Research by Seongje Hong. Selected work. Each entry shows one result and how it was measured.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="index.html">Seongje Hong</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" aria-current="page">Research</a></li>
+    </ul>
+  </nav>
+  <main>
+    <header>
+      <h1>Research</h1>
+      <p class="dim">Selected work. Each entry shows one result and how it was measured.</p>
+    </header>
+
+    <section>
+      <h2>Papers</h2>
+      <article class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Imperfect Alignment, Reliable Similarity: Score&ndash;Encoder Separation in Multimodal Contrastive Learning</span>
+          <span class="entry-meta">Submitted</span>
+        </div>
+        <div class="entry-sub">Seongje Hong, Wooseok Ha</div>
+      </article>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <article class="entry project">
+        <div class="entry-head">
+          <span class="entry-title">Self-Improving LLM Search for Alpha Research</span>
+          <span class="entry-meta">Sep. 2026 &ndash; Present</span>
+        </div>
+        <div class="entry-sub">Personal project &middot; adapts Google's <a href="https://arxiv.org/abs/2609.14858" target="_blank" rel="noopener">Dream-RSI</a> (2026)</div>
+        <p>An LLM agent proposes alpha hypotheses, backtests them, and revises the ones that fail. Dream-RSI improves the policy that decides which idea to try next and when to stop, by replaying recorded experiment trees instead of rerunning backtests. I rebuilt 444 recorded experiments into 59 replay bundles, revised the policy three times on 50 training bundles, and froze it before scoring 9 held-out bundles.</p>
+        <figure>
+          <svg class="chart" viewBox="0 0 392 164" role="img" aria-labelledby="rsi-chart-title rsi-chart-desc">
+            <title id="rsi-chart-title">Experiments run per policy in offline replay, as a share of the baseline</title>
+            <desc id="rsi-chart-desc">Training, 50 bundles: Baseline 376 (100%); Revision 1 208 (55%); Revision 2 165 (44%); Revision 3 135 (36%), selected. Held-out, 9 bundles: Baseline 55 (100%); Revision 3 40 (73%), selected.</desc>
+            <path class="grid" d="M68 18V84M68 110V144M130.5 18V84M130.5 110V144M193 18V84M193 110V144M255.5 18V84M255.5 110V144M318 18V84M318 110V144"/>
+            <text class="tick" x="68" y="159" text-anchor="middle">0%</text>
+            <text class="tick" x="130.5" y="159" text-anchor="middle">25%</text>
+            <text class="tick" x="193" y="159" text-anchor="middle">50%</text>
+            <text class="tick" x="255.5" y="159" text-anchor="middle">75%</text>
+            <text class="tick" x="318" y="159" text-anchor="middle">100%</text>
+            <text class="group" x="0" y="12">Training &middot; 50 bundles</text>
+            <text x="60" y="31" text-anchor="end">Baseline</text>
+            <path class="ref" d="M68 20H314A4 4 0 0 1 318 24V30A4 4 0 0 1 314 34H68Z"><title>Baseline: 376 experiments, 100% of baseline</title></path>
+            <text class="value" x="324" y="31">376 (100%)</text>
+            <text x="60" y="47" text-anchor="end">Revision 1</text>
+            <path class="series" d="M68 36H202.3A4 4 0 0 1 206.3 40V46A4 4 0 0 1 202.3 50H68Z"><title>Revision 1: 208 experiments, 55% of baseline</title></path>
+            <text class="value" x="212.3" y="47">208 (55%)</text>
+            <text x="60" y="63" text-anchor="end">Revision 2</text>
+            <path class="series" d="M68 52H173.7A4 4 0 0 1 177.7 56V62A4 4 0 0 1 173.7 66H68Z"><title>Revision 2: 165 experiments, 44% of baseline</title></path>
+            <text class="value" x="183.7" y="63">165 (44%)</text>
+            <text x="60" y="79" text-anchor="end">Revision 3</text>
+            <path class="series" d="M68 68H153.75A4 4 0 0 1 157.75 72V78A4 4 0 0 1 153.75 82H68Z"><title>Revision 3 (selected): 135 experiments, 36% of baseline</title></path>
+            <text class="value" x="163.75" y="79">135 (36%) &middot; selected</text>
+            <text class="group" x="0" y="104">Held-out &middot; 9 bundles</text>
+            <text x="60" y="123" text-anchor="end">Baseline</text>
+            <path class="ref" d="M68 112H314A4 4 0 0 1 318 116V122A4 4 0 0 1 314 126H68Z"><title>Baseline: 55 experiments, 100% of baseline</title></path>
+            <text class="value" x="324" y="123">55 (100%)</text>
+            <text x="60" y="139" text-anchor="end">Revision 3</text>
+            <path class="series" d="M68 128H245.825A4 4 0 0 1 249.825 132V138A4 4 0 0 1 245.825 142H68Z"><title>Revision 3 (selected): 40 experiments, 73% of baseline</title></path>
+            <text class="value" x="255.825" y="139">40 (73%) &middot; selected</text>
+          </svg>
+          <details>
+            <summary>Data</summary>
+            <table>
+              <thead>
+                <tr><th>group</th><th>policy</th><th>experiments</th><th>share of baseline</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Training, 50 bundles</td><td>Baseline</td><td>376</td><td>100%</td></tr>
+                <tr><td>Training, 50 bundles</td><td>Revision 1</td><td>208</td><td>55%</td></tr>
+                <tr><td>Training, 50 bundles</td><td>Revision 2</td><td>165</td><td>44%</td></tr>
+                <tr><td>Training, 50 bundles</td><td>Revision 3 (selected)</td><td>135</td><td>36%</td></tr>
+                <tr><td>Held-out, 9 bundles</td><td>Baseline</td><td>55</td><td>100%</td></tr>
+                <tr><td>Held-out, 9 bundles</td><td>Revision 3 (selected)</td><td>40</td><td>73%</td></tr>
+              </tbody>
+            </table>
+          </details>
+          <figcaption>Experiments run per policy in offline replay, as a share of the baseline. Every policy found the same gate-passing record as the baseline (1 of 50 training bundles, 1 of 9 held-out). The saving comes from stopping unproductive searches earlier, not from finding an alpha sooner. Nine held-out bundles is a small sample, and the effect on new alphas in live research is not yet established.</figcaption>
+        </figure>
+      </article>
+
+      <article class="entry project">
+        <div class="entry-head">
+          <span class="entry-title">Peer Selection from Filing Text</span>
+          <span class="entry-meta">Nov. 2024</span>
+        </div>
+        <div class="entry-sub">KAIST Financial Analysis Club &middot; equity research on AST SpaceMobile (NASDAQ: ASTS)</div>
+        <p>Comparable companies are usually picked by industry code, which for satellite communications mixes commercial, defense, and IoT businesses. I picked them from what firms say they do: the business section of each 10-K or 20-F, embedded, clustered, then filtered on fundamentals.</p>
+        <figure>
+          <ol class="pipeline">
+            <li><b>1,187</b> Russell 3000 firms &middot; business section of the latest 10-K or 20-F</li>
+            <li>Doc2Vec + TF-IDF embedding &middot; 500 dimensions</li>
+            <li>PCA &middot; 226 dimensions, 90% of variance</li>
+            <li>K-means &middot; <b>8</b> firms share the ASTS cluster</li>
+            <li>Add SES and Eutelsat, which are outside the index &middot; <b>10</b></li>
+            <li>Keep firms with satellite-internet revenue &middot; <b>5</b></li>
+            <li>Closest debt-to-equity to ASTS &middot; <b>3</b>: IRDM, SESG, ELA.PA</li>
+          </ol>
+        </figure>
+        <figure>
+          <img src="assets/research/asts-football-field.png" alt="Football-field chart of implied ASTS share prices from EV/SG&amp;A, EV/PP&amp;E, and P/B multiples, with vertical lines at the current and target prices" width="1169" height="379">
+          <figcaption>Implied share-price ranges from three peer multiples (EV/SG&amp;A, EV/PP&amp;E, P/B) against the $27 price and the $37 correlation-weighted target. BUY rating, priced at $26.8 on Nov. 14, 2024.</figcaption>
+        </figure>
+      </article>
+
+      <article class="entry project">
+        <div class="entry-head">
+          <span class="entry-title">Fama&ndash;French Three-Factor Model on KOSPI 200</span>
+          <span class="entry-meta">2016&ndash;2025</span>
+        </div>
+        <div class="entry-sub">Replication of Fama and French (1993) on Korean stocks &middot; <a href="https://github.com/WQGGSEY/FF2/tree/main/Fama_French_3_Factor_Model" target="_blank" rel="noopener">code</a></div>
+        <p>Twenty-five portfolios sorted on size and book-to-market, each regressed on five factor sets. Market, size, and value together explain most of the variation; the bond-market term and default spreads explain almost none. A Bayesian variable-selection model fit by MCMC then estimates how likely each factor is to belong in the model.</p>
+        <figure>
+          <img src="assets/research/ff2-r2-heatmaps.png" alt="Five heatmaps of R&sup2; across the 25 size and book-to-market portfolios, one per factor set" width="1800" height="865">
+          <figcaption>R&sup2; for each of the 25 portfolios (rows: size quintile, columns: book-to-market quintile). Panels: term + default, market, SMB + HML, market + SMB + HML, and all five factors.</figcaption>
+        </figure>
+      </article>
+
+      <article class="entry project">
+        <div class="entry-head">
+          <span class="entry-title">Momentum and Value in Korea</span>
+          <span class="entry-meta">2016&ndash;2024</span>
+        </div>
+        <div class="entry-sub">Testing Asness (2011), &ldquo;Momentum in Japan: The Exception That Proves the Rule,&rdquo; on KOSPI 200 &middot; <a href="https://github.com/WQGGSEY/FF2/tree/main/JPN_momentum_Failure" target="_blank" rel="noopener">code</a></div>
+        <p>In Japan, momentum fails on its own but still helps when combined with value. I built annually rebalanced value (book-to-market) and momentum portfolios on KOSPI 200 and fit a PyMC model for yearly weights. In Korea momentum also fails on its own, and a 50/50 mix with value did no better.</p>
+        <figure>
+          <img src="assets/research/ff2-value-momentum-sharpe.png" alt="Bar chart of Sharpe ratios for the value, momentum, and 50/50 portfolios" width="1200" height="750">
+          <figcaption>Sharpe ratios, 2016&ndash;2024: value about 0.0, momentum about &minus;0.7, the 50/50 mix about &minus;0.9.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <footer>
+      <p class="dim small">Last updated: October 2026</p>
+    </footer>
+  </main>
+</body>
+</html>

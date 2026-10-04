@@ -1,3 +1,0 @@
-[2026-05-07T11:43:39.515Z] GET http://localhost:8765/ → 200 (22ms, 4016B)
-[2026-05-07T11:43:39.544Z] GET http://localhost:8765/style.css → 200 (3ms, 2732B)
-[2026-05-07T11:43:39.544Z] GET http://localhost:8765/assets/photo.jpg → 200 (8ms, 65627B)

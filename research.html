@@ -88,7 +88,7 @@
               </tbody>
             </table>
           </details>
-          <figcaption>Experiments run per policy in offline replay, as a share of the baseline. Every revision kept the gate-passing records the baseline found (1 of 50 training bundles, 1 of 9 held-out) while stopping low-yield searches earlier.</figcaption>
+          <figcaption>Experiments run per policy in offline replay, as a share of the baseline. Every revision kept the gate-passing records the baseline found while stopping low-yield searches earlier.</figcaption>
         </figure>
       </article>
 
@@ -126,19 +126,6 @@
         <figure>
           <img src="assets/research/ff2-r2-heatmaps.png" alt="Five heatmaps of R&sup2; across the 25 size and book-to-market portfolios, one per factor set" width="1800" height="865">
           <figcaption>R&sup2; for each of the 25 portfolios (rows: size quintile, columns: book-to-market quintile). Panels: term + default, market, SMB + HML, market + SMB + HML, and all five factors.</figcaption>
-        </figure>
-      </article>
-
-      <article class="entry project">
-        <div class="entry-head">
-          <span class="entry-title">Momentum and Value in Korea</span>
-          <span class="entry-meta">2016&ndash;2024</span>
-        </div>
-        <div class="entry-sub">Testing Asness (2011), &ldquo;Momentum in Japan: The Exception That Proves the Rule,&rdquo; on KOSPI 200 &middot; <a href="https://github.com/WQGGSEY/FF2/tree/main/JPN_momentum_Failure" target="_blank" rel="noopener">code</a></div>
-        <p>Asness (2011) found that momentum is weak on its own in Japan but still helps alongside value. I extended the test to KOSPI 200 with annually rebalanced value (book-to-market) and momentum portfolios and a PyMC model for yearly weights.</p>
-        <figure>
-          <img src="assets/research/ff2-value-momentum-sharpe.png" alt="Bar chart of Sharpe ratios for the value, momentum, and 50/50 portfolios" width="1200" height="750">
-          <figcaption>Sharpe ratios, 2016&ndash;2024: value about 0.0, momentum about &minus;0.7, the 50/50 mix about &minus;0.9.</figcaption>
         </figure>
       </article>
     </section>
